@@ -50,20 +50,17 @@ X_{t_{i+1}} = X_{t_i} + \mu(t_i, X_{t_i}) \Delta t + \sigma(t_i, X_{t_i}) \Delta
 $$
 
 ### DeepBSDE Approach
-Discretize time:
-$$
-0 = t_0 < t_1 < \cdots < t_n = T.
-$$
 
-Use neural networks \( Z_{t_k}^{\theta_k} \) to approximate \( Z_{t_k} \):
-$$
-\bar{Z}_{t_k} = Z_{t_k}^{\theta_k}(\bar{X}_{t_k}).
-$$
+The DeepBSDE framework employs a systematic process to solve backward stochastic differential equations (BSDEs), divided into three key steps:
 
-Train networks by minimizing the loss:
-$$
-\inf_{\Theta} \frac{1}{M} \sum_{l=1}^M \mathbb{E}\big[|\Phi(\bar{X}_{T,l}) - \bar{Y}_{T,l}^\Theta|^2\big].
-$$
+1. **Time Discretization**  
+   The continuous time interval \([0, T]\) is divided into a finite number of discrete time steps. This discretization ensures computational feasibility while approximating the dynamics of the stochastic process.
+
+2. **Neural Network Approximation**  
+   Neural networks are used to approximate the conditional expectations inherent in the BSDE formulation. Specifically, the \(Z_t\) term is parameterized as a function of the state variable at each discrete time step, allowing flexible and accurate representation.
+
+3. **Model Training**  
+   The model is trained by minimizing a loss function. This loss measures the difference between the predicted terminal condition and the true terminal condition. The optimization process averages the loss over multiple simulated trajectories, using stochastic gradient-based techniques to adjust the neural network parameters effectively.
 
 
 
