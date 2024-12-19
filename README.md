@@ -50,16 +50,25 @@ X_{t_{i+1}} = X_{t_i} + \mu(t_i, X_{t_i}) \Delta t + \sigma(t_i, X_{t_i}) \Delta
 $$
 
 ### DeepBSDE Approach
+1. Discretize time 
+$$
+0 = t_0 < t_1 < \cdots < t_n = T`.
+$$
 
-1. Discretize time \( 0 = t_0 < t_1 < \cdots < t_n = T \).
-2. Use neural networks \( Z_{t_k}^{\theta_k} \) to approximate \( Z_{t_k} \):
-   \[
-   \bar{Z}_{t_k} = Z_{t_k}^{\theta_k}(\bar{X}_{t_k}).
-   \]
+2. Use neural networks 
+$$
+Z_{t_k}^{\theta_k}$$ to approximate `Z_{t_k}`:
+$$
+
+$$
+\bar{Z}_{t_k} = Z_{t_k}^{\theta_k}(\bar{X}_{t_k}).
+$$
+
 3. Train networks by minimizing the loss:
-   \[
-   \inf_{\Theta} \frac{1}{M} \sum_{l=1}^M \mathbb{E}\big[|\Phi(\bar{X}_{T,l}) - \bar{Y}_{T,l}^\Theta|^2\big].
-   \]
+
+$$
+\inf_{\Theta} \frac{1}{M} \sum_{l=1}^M \mathbb{E}\big[|\Phi(\bar{X}_{T,l}) - \bar{Y}_{T,l}^\Theta|^2\big].
+$$
 
 
 ## Applications
