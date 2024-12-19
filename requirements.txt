@@ -1,0 +1,6 @@
+## Usage
+
+- `src/model.py`: Contains the DeepBSDE model definition.
+- `src/black_scholes.py`: Implements the Black-Scholes model functions.
+- `src/training.py`: Includes the training loop.
+- `notebooks/DeepBSDE_Options.ipynb`: A Jupyter notebook for demonstration and experimentation.
