@@ -65,6 +65,7 @@ $$
    \inf_{\Theta} \frac{1}{M} \sum_{l=1}^M \mathbb{E}\big[|\Phi(\bar{X}_{T,l}) - \bar{Y}_{T,l}^\Theta|^2\big].
    $$
 
+
 ## Applications
 
 ### European Option Pricing
