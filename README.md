@@ -54,7 +54,7 @@ $$
 The DeepBSDE framework employs a systematic process to solve backward stochastic differential equations (BSDEs), divided into three key steps:
 
 1. **Time Discretization**  
-   The continuous time interval \[0, T]\ is divided into a finite number of discrete time steps. This discretization ensures computational feasibility while approximating the dynamics of the stochastic process.
+   The continuous time interval \[0, T] is divided into a finite number of discrete time steps. This discretization ensures computational feasibility while approximating the dynamics of the stochastic process.
 
 2. **Neural Network Approximation**  
    Neural networks are used to approximate the conditional expectations inherent in the BSDE formulation. Specifically, the \(Z_t\) term is parameterized as a function of the state variable at each discrete time step, allowing flexible and accurate representation.
