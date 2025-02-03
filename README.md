@@ -14,7 +14,8 @@ Backward Stochastic Differential Equations (BSDEs) play a pivotal role in quanti
 ## Theoretical Background
 
 ### BSDE Definition
-A BSDE is defined on a filtered probability space $ \Omega, F, \{F_t\}_{t \in [0, T]}, P \colon $
+A BSDE is defined on a filtered probability space: <br> 
+A filtered probability space consisting of a sample space Ω, a sigma-algebra F, a filtration (F_t) indexed by t in the interval [0, T], and a probability measure P.
 
 
 $$
